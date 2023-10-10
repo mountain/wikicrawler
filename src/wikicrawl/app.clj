@@ -1,7 +1,6 @@
 (ns wikicrawl.app
   (:use [wikicrawl.util])
-  (:require [wikicrawl.cat :as cat]
-            [wikicrawl.text :as txt])
+  (:require [wikicrawl.cat :as cat])
   (:gen-class))
 
 (defn -main []

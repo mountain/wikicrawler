@@ -41,7 +41,7 @@ public class DohResolver {
 
             String cache_control = con.getHeaderField("cache-control");
             String maxAgeString = cache_control.replace("max-age=", "");
-            Integer maxAge = new Integer(maxAgeString);
+            Integer maxAge = Integer.parseInt(maxAgeString);
 
             Message response = new Message(readBytes);
 

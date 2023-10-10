@@ -1,9 +1,7 @@
 (ns wikicrawl.text
   (:use [wikicrawl.config]
         [wikicrawl.util]
-        [wikicrawl.redis]
-        ;[wikicrawl.qingstor]
-        )
+        [wikicrawl.redis])
   (:require [clj-yaml.core :as yaml]))
 
 (defn crawl-file [lang page tree path depth progress]
@@ -19,7 +17,5 @@
             (if-let [text (gen-page lang pagename)]
               (do
                 (println "=>" newname)
-                (.write newfile text))))
-          ;(if (.exists (clojure.java.io/as-file newname)) (.put qs newname))
-          )))
+                (.write newfile text)))))))
     (catch Throwable e (.printStackTrace e))))

@@ -12,6 +12,7 @@
                  [cheshire "5.11.0"]
                  [com.taoensso/carmine "3.2.0"]
                  [dnsjava/dnsjava "3.5.2"]
+                 [net.gcardone.junidecode/junidecode "0.4.1"]
                  ]
 
   :source-paths ["src"]
